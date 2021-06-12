@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C9661942674DD94009146F9 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9661922674DD94009146F9 /* CalculatorViewController.swift */; };
+		4C9661952674DD94009146F9 /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C9661932674DD94009146F9 /* CalculatorViewController.xib */; };
 		4CA260132674D60A00726FCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA260122674D60A00726FCF /* AppDelegate.swift */; };
 		4CA260152674D60A00726FCF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA260142674D60A00726FCF /* SceneDelegate.swift */; };
 		4CA260172674D60A00726FCF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA260162674D60A00726FCF /* ViewController.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C9661922674DD94009146F9 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		4C9661932674DD94009146F9 /* CalculatorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorViewController.xib; sourceTree = "<group>"; };
 		4CA2600F2674D60A00726FCF /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CA260122674D60A00726FCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CA260142674D60A00726FCF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +80,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C9661912674DD42009146F9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4C9661922674DD94009146F9 /* CalculatorViewController.swift */,
+				4C9661932674DD94009146F9 /* CalculatorViewController.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		4CA260062674D60A00726FCF = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +112,7 @@
 		4CA260112674D60A00726FCF /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				4C9661912674DD42009146F9 /* ViewControllers */,
 				4CA260122674D60A00726FCF /* AppDelegate.swift */,
 				4CA260142674D60A00726FCF /* SceneDelegate.swift */,
 				4CA260162674D60A00726FCF /* ViewController.swift */,
@@ -233,6 +247,7 @@
 			files = (
 				4CA2601F2674D60D00726FCF /* LaunchScreen.storyboard in Resources */,
 				4CA2601C2674D60D00726FCF /* Assets.xcassets in Resources */,
+				4C9661952674DD94009146F9 /* CalculatorViewController.xib in Resources */,
 				4CA2601A2674D60A00726FCF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +275,7 @@
 			files = (
 				4CA260172674D60A00726FCF /* ViewController.swift in Sources */,
 				4CA260132674D60A00726FCF /* AppDelegate.swift in Sources */,
+				4C9661942674DD94009146F9 /* CalculatorViewController.swift in Sources */,
 				4CA260152674D60A00726FCF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
