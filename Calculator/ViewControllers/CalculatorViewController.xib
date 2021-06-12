@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalculatorViewController" customModule="Calculator" customModuleProvider="target">
+            <connections>
+                <outlet property="extraButtonsStackview" destination="Y3s-ZM-f2Y" id="rtW-rh-Hja"/>
+                <outlet property="numberStackView" destination="5mo-Vy-67b" id="15G-rS-HOB"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="012" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RXb-pC-WfO">
+                    <rect key="frame" x="60" y="24" width="776" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="6fy-Fv-4C9"/>
+                        <constraint firstAttribute="height" constant="50" id="S9Q-Yb-E4E"/>
+                    </constraints>
+                    <color key="textColor" name="DisplayTextColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="6fy-Fv-4C9"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="6fy-Fv-4C9"/>
+                            <exclude reference="S9Q-Yb-E4E"/>
+                        </mask>
+                    </variation>
+                </textField>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Kc-lz-Xor">
+                    <rect key="frame" x="60" y="90" width="356" height="287"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2B7-m9-l4K">
+                            <rect key="frame" x="8" y="8" width="340" height="271"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Y3s-ZM-f2Y">
+                                    <rect key="frame" x="0.0" y="0.0" width="166" height="271"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WU1-2J-qMG">
+                                            <rect key="frame" x="0.0" y="0.0" width="166" height="62"/>
+                                            <color key="backgroundColor" name="DefaultButtonColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                            <state key="normal" title="SIN">
+                                                <color key="titleColor" name="DefaultButtonTextColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0BQ-uF-9Ls">
+                                            <rect key="frame" x="0.0" y="70" width="166" height="61.5"/>
+                                            <color key="backgroundColor" name="DefaultButtonColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                            <state key="normal" title="COS">
+                                                <color key="titleColor" name="DefaultButtonTextColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jq6-h5-uhn">
+                                            <rect key="frame" x="0.0" y="139.5" width="166" height="62"/>
+                                            <color key="backgroundColor" name="DefaultButtonColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                            <color key="tintColor" name="DefaultButtonTextColor"/>
+                                            <state key="normal">
+                                                <color key="titleColor" name="DefaultButtonTextColor"/>
+                                                <imageReference key="image" image="bitcoinsign.circle" catalog="system" symbolScale="large"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sju-Ow-wHv">
+                                            <rect key="frame" x="0.0" y="209.5" width="166" height="61.5"/>
+                                            <color key="backgroundColor" name="DefaultButtonColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                            <state key="normal" title="Settings">
+                                                <color key="titleColor" name="DefaultButtonTextColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fYI-Ip-WYe">
+                                    <rect key="frame" x="174" y="0.0" width="166" height="271"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yga-mg-5ta">
+                                            <rect key="frame" x="0.0" y="0.0" width="166" height="48"/>
+                                            <color key="backgroundColor" name="DefaultButtonColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                            <state key="normal" title="C">
+                                                <color key="titleColor" name="DefaultButtonTextColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="510-Jx-Ayn">
+                                            <rect key="frame" x="0.0" y="56" width="166" height="47.5"/>
+                                            <color key="backgroundColor" name="DefaultButtonColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                            <state key="normal" title="/">
+                                                <color key="titleColor" name="DefaultButtonTextColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUj-Eg-wfv">
+                                            <rect key="frame" x="0.0" y="111.5" width="166" height="48"/>
+                                            <color key="backgroundColor" name="DefaultButtonColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                            <state key="normal" title="X">
+                                                <color key="titleColor" name="DefaultButtonTextColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H8B-QS-xHX">
+                                            <rect key="frame" x="0.0" y="167.5" width="166" height="47.5"/>
+                                            <color key="backgroundColor" name="DefaultButtonColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                            <state key="normal" title="-">
+                                                <color key="titleColor" name="DefaultButtonTextColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4x-gS-kty">
+                                            <rect key="frame" x="0.0" y="223" width="166" height="48"/>
+                                            <color key="backgroundColor" name="DefaultButtonColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                            <state key="normal" title="+">
+                                                <color key="titleColor" name="DefaultButtonTextColor"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="2B7-m9-l4K" secondAttribute="trailing" constant="8" id="Ah2-Yp-NqD"/>
+                        <constraint firstItem="2B7-m9-l4K" firstAttribute="top" secondItem="7Kc-lz-Xor" secondAttribute="top" constant="8" id="BtL-fU-5Af"/>
+                        <constraint firstAttribute="bottom" secondItem="2B7-m9-l4K" secondAttribute="bottom" constant="8" id="FLf-5x-xua"/>
+                        <constraint firstItem="2B7-m9-l4K" firstAttribute="top" secondItem="7Kc-lz-Xor" secondAttribute="top" constant="8" id="KFO-ai-zn4"/>
+                        <constraint firstItem="2B7-m9-l4K" firstAttribute="leading" secondItem="7Kc-lz-Xor" secondAttribute="leading" constant="8" id="RtM-3Q-p3d"/>
+                        <constraint firstItem="2B7-m9-l4K" firstAttribute="leading" secondItem="7Kc-lz-Xor" secondAttribute="leading" constant="8" id="Tzz-Vj-mxV"/>
+                        <constraint firstAttribute="bottom" secondItem="2B7-m9-l4K" secondAttribute="bottom" constant="8" id="b76-5d-VBx"/>
+                        <constraint firstAttribute="trailing" secondItem="2B7-m9-l4K" secondAttribute="trailing" constant="8" id="zLW-xI-5yk"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="BtL-fU-5Af"/>
+                            <exclude reference="RtM-3Q-p3d"/>
+                            <exclude reference="b76-5d-VBx"/>
+                            <exclude reference="zLW-xI-5yk"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <exclude reference="Ah2-Yp-NqD"/>
+                            <include reference="BtL-fU-5Af"/>
+                            <exclude reference="FLf-5x-xua"/>
+                            <exclude reference="KFO-ai-zn4"/>
+                            <include reference="RtM-3Q-p3d"/>
+                            <exclude reference="Tzz-Vj-mxV"/>
+                            <include reference="b76-5d-VBx"/>
+                            <include reference="zLW-xI-5yk"/>
+                        </mask>
+                    </variation>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DVl-FP-DBU">
+                    <rect key="frame" x="432" y="90" width="404" height="287"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5mo-Vy-67b">
+                            <rect key="frame" x="8" y="8" width="388" height="271"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5tD-HM-a2F">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="271"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gRZ-Gl-Rz2">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="62"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sax-U8-rq7">
+                                                    <rect key="frame" x="0.0" y="0.0" width="94.5" height="62"/>
+                                                    <color key="backgroundColor" name="DefaultButtonColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <state key="normal" title="7">
+                                                        <color key="titleColor" name="DefaultButtonTextColor"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZt-8x-Ngz">
+                                                    <rect key="frame" x="102.5" y="0.0" width="95" height="62"/>
+                                                    <color key="backgroundColor" name="DefaultButtonColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <state key="normal" title="8">
+                                                        <color key="titleColor" name="DefaultButtonTextColor"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgI-ko-PZb">
+                                                    <rect key="frame" x="205.5" y="0.0" width="94.5" height="62"/>
+                                                    <color key="backgroundColor" name="DefaultButtonColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <state key="normal" title="9">
+                                                        <color key="titleColor" name="DefaultButtonTextColor"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FfS-cY-uPW">
+                                            <rect key="frame" x="0.0" y="70" width="300" height="61.5"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CO2-AL-SDf">
+                                                    <rect key="frame" x="0.0" y="0.0" width="94.5" height="61.5"/>
+                                                    <color key="backgroundColor" name="DefaultButtonColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <state key="normal" title="4">
+                                                        <color key="titleColor" name="DefaultButtonTextColor"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xj5-bx-f2G">
+                                                    <rect key="frame" x="102.5" y="0.0" width="95" height="61.5"/>
+                                                    <color key="backgroundColor" name="DefaultButtonColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <state key="normal" title="5">
+                                                        <color key="titleColor" name="DefaultButtonTextColor"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Hi-gz-Nuq">
+                                                    <rect key="frame" x="205.5" y="0.0" width="94.5" height="61.5"/>
+                                                    <color key="backgroundColor" name="DefaultButtonColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <state key="normal" title="6">
+                                                        <color key="titleColor" name="DefaultButtonTextColor"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zKb-Tz-K0i">
+                                            <rect key="frame" x="0.0" y="139.5" width="300" height="62"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6g9-DM-by6">
+                                                    <rect key="frame" x="0.0" y="0.0" width="94.5" height="62"/>
+                                                    <color key="backgroundColor" name="DefaultButtonColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <state key="normal" title="1">
+                                                        <color key="titleColor" name="DefaultButtonTextColor"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sbh-Et-30V">
+                                                    <rect key="frame" x="102.5" y="0.0" width="95" height="62"/>
+                                                    <color key="backgroundColor" name="DefaultButtonColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <state key="normal" title="2">
+                                                        <color key="titleColor" name="DefaultButtonTextColor"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbB-4u-fgx">
+                                                    <rect key="frame" x="205.5" y="0.0" width="94.5" height="62"/>
+                                                    <color key="backgroundColor" name="DefaultButtonColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <state key="normal" title="3">
+                                                        <color key="titleColor" name="DefaultButtonTextColor"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="a4X-Cp-7L5">
+                                            <rect key="frame" x="0.0" y="209.5" width="300" height="61.5"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ke-Gc-AdV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="94.5" height="61.5"/>
+                                                    <color key="backgroundColor" name="DefaultButtonColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <state key="normal" title=",">
+                                                        <color key="titleColor" name="DefaultButtonTextColor"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffM-aV-LL9">
+                                                    <rect key="frame" x="102.5" y="0.0" width="95" height="61.5"/>
+                                                    <color key="backgroundColor" name="DefaultButtonColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <state key="normal" title="0">
+                                                        <color key="titleColor" name="DefaultButtonTextColor"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVh-r1-uv2">
+                                                    <rect key="frame" x="205.5" y="0.0" width="94.5" height="61.5"/>
+                                                    <color key="backgroundColor" name="DefaultButtonColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <state key="normal" title="00">
+                                                        <color key="titleColor" name="DefaultButtonTextColor"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02f-SU-Jnw">
+                                    <rect key="frame" x="308" y="0.0" width="80" height="271"/>
+                                    <color key="backgroundColor" name="EqualButtonColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                    <state key="normal" title="=">
+                                        <color key="titleColor" name="EqualButtonTextColor"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="5mo-Vy-67b" firstAttribute="leading" secondItem="DVl-FP-DBU" secondAttribute="leading" constant="8" id="6nK-Zu-V4g"/>
+                        <constraint firstItem="5mo-Vy-67b" firstAttribute="leading" secondItem="DVl-FP-DBU" secondAttribute="leading" constant="8" id="8VJ-Zj-hdP"/>
+                        <constraint firstItem="5mo-Vy-67b" firstAttribute="top" secondItem="DVl-FP-DBU" secondAttribute="top" constant="8" id="djm-2O-M8k"/>
+                        <constraint firstAttribute="bottom" secondItem="5mo-Vy-67b" secondAttribute="bottom" constant="8" id="g69-D3-ZcZ"/>
+                        <constraint firstAttribute="trailing" secondItem="5mo-Vy-67b" secondAttribute="trailing" constant="8" id="ili-ug-teK"/>
+                        <constraint firstAttribute="trailing" secondItem="5mo-Vy-67b" secondAttribute="trailing" constant="8" id="jIT-da-dvc"/>
+                        <constraint firstAttribute="bottom" secondItem="5mo-Vy-67b" secondAttribute="bottom" constant="8" id="pQ2-X3-Nqf"/>
+                        <constraint firstItem="5mo-Vy-67b" firstAttribute="top" secondItem="DVl-FP-DBU" secondAttribute="top" constant="8" id="q9l-MD-97W"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="6nK-Zu-V4g"/>
+                            <exclude reference="djm-2O-M8k"/>
+                            <exclude reference="jIT-da-dvc"/>
+                            <exclude reference="pQ2-X3-Nqf"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="6nK-Zu-V4g"/>
+                            <exclude reference="8VJ-Zj-hdP"/>
+                            <include reference="djm-2O-M8k"/>
+                            <exclude reference="g69-D3-ZcZ"/>
+                            <exclude reference="ili-ug-teK"/>
+                            <include reference="jIT-da-dvc"/>
+                            <include reference="pQ2-X3-Nqf"/>
+                            <exclude reference="q9l-MD-97W"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="Background"/>
+            <constraints>
+                <constraint firstItem="7Kc-lz-Xor" firstAttribute="top" secondItem="RXb-pC-WfO" secondAttribute="bottom" constant="16" id="0zN-AM-viB"/>
+                <constraint firstItem="DVl-FP-DBU" firstAttribute="leading" secondItem="7Kc-lz-Xor" secondAttribute="trailing" constant="16" id="1ak-J1-H0W"/>
+                <constraint firstItem="7Kc-lz-Xor" firstAttribute="leading" secondItem="DVl-FP-DBU" secondAttribute="trailing" constant="16" id="3DQ-01-hcI"/>
+                <constraint firstItem="DVl-FP-DBU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="462-fE-I0h"/>
+                <constraint firstItem="7Kc-lz-Xor" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="5rD-Ev-ql8"/>
+                <constraint firstItem="DVl-FP-DBU" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.5" id="9AN-7x-bHf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RXb-pC-WfO" secondAttribute="trailing" constant="16" id="9Us-tC-eLl"/>
+                <constraint firstItem="RXb-pC-WfO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="CMJ-L3-IzH"/>
+                <constraint firstItem="DVl-FP-DBU" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.7" id="CsN-Ip-5kM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="7Kc-lz-Xor" secondAttribute="bottom" constant="16" id="L3d-5y-Cgo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7Kc-lz-Xor" secondAttribute="trailing" constant="16" id="NRf-n6-VpS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="DVl-FP-DBU" secondAttribute="bottom" constant="16" id="WS6-23-B1a"/>
+                <constraint firstItem="7Kc-lz-Xor" firstAttribute="top" secondItem="RXb-pC-WfO" secondAttribute="bottom" constant="16" id="WoF-9T-Bpz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="7Kc-lz-Xor" secondAttribute="bottom" constant="16" id="gsH-jj-ohT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="DVl-FP-DBU" secondAttribute="bottom" constant="16" id="jXn-n1-EMm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DVl-FP-DBU" secondAttribute="trailing" constant="16" id="kjk-xX-d79"/>
+                <constraint firstItem="DVl-FP-DBU" firstAttribute="top" secondItem="RXb-pC-WfO" secondAttribute="bottom" constant="16" id="lm3-Gx-i1n"/>
+                <constraint firstItem="7Kc-lz-Xor" firstAttribute="leading" secondItem="DVl-FP-DBU" secondAttribute="trailing" constant="16" id="lxj-qF-BtZ"/>
+                <constraint firstItem="DVl-FP-DBU" firstAttribute="top" secondItem="RXb-pC-WfO" secondAttribute="bottom" constant="16" id="nNz-T0-OiZ"/>
+                <constraint firstItem="RXb-pC-WfO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="sqR-wu-YA9"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="NRf-n6-VpS"/>
+                    <exclude reference="gsH-jj-ohT"/>
+                    <exclude reference="jXn-n1-EMm"/>
+                    <exclude reference="3DQ-01-hcI"/>
+                    <exclude reference="WoF-9T-Bpz"/>
+                    <exclude reference="lxj-qF-BtZ"/>
+                    <exclude reference="462-fE-I0h"/>
+                    <exclude reference="CsN-Ip-5kM"/>
+                    <exclude reference="nNz-T0-OiZ"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="constraints">
+                    <exclude reference="L3d-5y-Cgo"/>
+                    <include reference="NRf-n6-VpS"/>
+                    <exclude reference="WS6-23-B1a"/>
+                    <include reference="gsH-jj-ohT"/>
+                    <include reference="jXn-n1-EMm"/>
+                    <exclude reference="kjk-xX-d79"/>
+                    <exclude reference="0zN-AM-viB"/>
+                    <include reference="3DQ-01-hcI"/>
+                    <exclude reference="5rD-Ev-ql8"/>
+                    <include reference="WoF-9T-Bpz"/>
+                    <include reference="lxj-qF-BtZ"/>
+                    <exclude reference="1ak-J1-H0W"/>
+                    <include reference="462-fE-I0h"/>
+                    <exclude reference="9AN-7x-bHf"/>
+                    <include reference="CsN-Ip-5kM"/>
+                    <exclude reference="lm3-Gx-i1n"/>
+                    <include reference="nNz-T0-OiZ"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="138.61607142857142" y="128.98550724637681"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bitcoinsign.circle" catalog="system" width="128" height="121"/>
+        <namedColor name="Background">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DefaultButtonColor">
+            <color red="0.83137254901960789" green="0.82352941176470584" blue="0.80392156862745101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DefaultButtonTextColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DisplayTextColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="EqualButtonColor">
+            <color red="0.0" green="0.20000000000000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="EqualButtonTextColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
