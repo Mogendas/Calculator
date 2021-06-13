@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalculatorViewController" customModule="Calculator" customModuleProvider="target">
             <connections>
+                <outlet property="calculatorView" destination="RXb-pC-WfO" id="o1Y-eG-0g8"/>
                 <outlet property="extraButtonsStackview" destination="Y3s-ZM-f2Y" id="rtW-rh-Hja"/>
                 <outlet property="numberStackView" destination="5mo-Vy-67b" id="15G-rS-HOB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
