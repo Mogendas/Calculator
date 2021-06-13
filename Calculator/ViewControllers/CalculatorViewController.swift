@@ -11,10 +11,29 @@ class CalculatorViewController: UIViewController {
 
     @IBOutlet private weak var extraButtonsStackview: UIStackView!
     @IBOutlet private weak var numberStackView: UIStackView!
+    @IBOutlet private weak var calculatorView: UITextField!
+    
+    private var viewModel: CalculatorViewModel
+    
+    init(viewModel: CalculatorViewModel) {
+        self.viewModel = viewModel
+        let nib = String(describing: CalculatorViewController.self)
+        super.init(nibName: nib, bundle: nil)
+    }
+    
+    @available (*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.calculationClosure = calculationClosure(result:)
         updateView()
+    }
+    
+    private func calculationClosure(result: String) {
+        calculatorView.text = result
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -28,9 +47,11 @@ class CalculatorViewController: UIViewController {
         case .portrait, .portraitUpsideDown:
             extraButtonsStackview?.isHidden = isIpad ? false : true
             numberStackView?.axis = .vertical
+            viewModel.state = isIpad ? .advanced : .basic
         case .landscapeLeft, .landscapeRight:
             extraButtonsStackview?.isHidden = false
             numberStackView?.axis = .horizontal
+            viewModel.state = .advanced
         default:
             return
         }
