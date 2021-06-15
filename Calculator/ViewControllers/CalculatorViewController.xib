@@ -22,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="012" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RXb-pC-WfO">
+                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RXb-pC-WfO">
                     <rect key="frame" x="60" y="24" width="776" height="50"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -53,7 +53,7 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Y3s-ZM-f2Y">
                                     <rect key="frame" x="0.0" y="0.0" width="166" height="271"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WU1-2J-qMG">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WU1-2J-qMG" customClass="CalculatorButton" customModule="Calculator" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="166" height="62"/>
                                             <color key="backgroundColor" name="DefaultButtonColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -64,9 +64,13 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                     <integer key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="function" value="sin"/>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="5cZ-jB-dCc"/>
+                                            </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0BQ-uF-9Ls">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0BQ-uF-9Ls" customClass="CalculatorButton" customModule="Calculator" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="70" width="166" height="61.5"/>
                                             <color key="backgroundColor" name="DefaultButtonColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -77,9 +81,13 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                     <integer key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="function" value="cos"/>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="ZIv-ro-N0r"/>
+                                            </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jq6-h5-uhn">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jq6-h5-uhn" customClass="CalculatorButton" customModule="Calculator" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="139.5" width="166" height="62"/>
                                             <color key="backgroundColor" name="DefaultButtonColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -92,9 +100,13 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                     <integer key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="function" value="bitcoin"/>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="0tq-Mk-D6r"/>
+                                            </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sju-Ow-wHv">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sju-Ow-wHv" customClass="CalculatorButton" customModule="Calculator" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="209.5" width="166" height="61.5"/>
                                             <color key="backgroundColor" name="DefaultButtonColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -105,14 +117,18 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                     <integer key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="function" value="settings"/>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="WfD-dY-fBW"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fYI-Ip-WYe">
                                     <rect key="frame" x="174" y="0.0" width="166" height="271"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yga-mg-5ta">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yga-mg-5ta" customClass="CalculatorButton" customModule="Calculator" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="166" height="48"/>
                                             <color key="backgroundColor" name="DefaultButtonColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -123,9 +139,13 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                     <integer key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="function" value="clear"/>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="eOd-U1-IW6"/>
+                                            </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="510-Jx-Ayn">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="510-Jx-Ayn" customClass="CalculatorButton" customModule="Calculator" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="56" width="166" height="47.5"/>
                                             <color key="backgroundColor" name="DefaultButtonColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -136,9 +156,13 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                     <integer key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="function" value="/"/>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="YpO-q7-CL7"/>
+                                            </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUj-Eg-wfv">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUj-Eg-wfv" customClass="CalculatorButton" customModule="Calculator" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="111.5" width="166" height="48"/>
                                             <color key="backgroundColor" name="DefaultButtonColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -149,9 +173,13 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                     <integer key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="function" value="*"/>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="kht-Nf-dS0"/>
+                                            </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H8B-QS-xHX">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H8B-QS-xHX" customClass="CalculatorButton" customModule="Calculator" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="167.5" width="166" height="47.5"/>
                                             <color key="backgroundColor" name="DefaultButtonColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -162,9 +190,13 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                     <integer key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="function" value="-"/>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="VeP-83-eyd"/>
+                                            </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4x-gS-kty">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4x-gS-kty" customClass="CalculatorButton" customModule="Calculator" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="223" width="166" height="48"/>
                                             <color key="backgroundColor" name="DefaultButtonColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -175,7 +207,11 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                     <integer key="value" value="8"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="function" value="+"/>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="pce-Sx-3fO"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>
@@ -226,7 +262,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gRZ-Gl-Rz2">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="62"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sax-U8-rq7">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sax-U8-rq7" customClass="CalculatorButton" customModule="Calculator" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="94.5" height="62"/>
                                                     <color key="backgroundColor" name="DefaultButtonColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -237,9 +273,13 @@
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                             <integer key="value" value="8"/>
                                                         </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="function" value="7"/>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="qcF-iG-vsO"/>
+                                                    </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZt-8x-Ngz">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZt-8x-Ngz" customClass="CalculatorButton" customModule="Calculator" customModuleProvider="target">
                                                     <rect key="frame" x="102.5" y="0.0" width="95" height="62"/>
                                                     <color key="backgroundColor" name="DefaultButtonColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -250,9 +290,13 @@
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                             <integer key="value" value="8"/>
                                                         </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="function" value="8"/>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="WNZ-mz-9SP"/>
+                                                    </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgI-ko-PZb">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgI-ko-PZb" customClass="CalculatorButton" customModule="Calculator" customModuleProvider="target">
                                                     <rect key="frame" x="205.5" y="0.0" width="94.5" height="62"/>
                                                     <color key="backgroundColor" name="DefaultButtonColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -263,14 +307,18 @@
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                             <integer key="value" value="8"/>
                                                         </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="function" value="9"/>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="Vv9-Us-T6L"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FfS-cY-uPW">
                                             <rect key="frame" x="0.0" y="70" width="300" height="61.5"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CO2-AL-SDf">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CO2-AL-SDf" customClass="CalculatorButton" customModule="Calculator" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="94.5" height="61.5"/>
                                                     <color key="backgroundColor" name="DefaultButtonColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -281,9 +329,13 @@
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                             <integer key="value" value="8"/>
                                                         </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="function" value="4"/>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="zSD-Tt-VDo"/>
+                                                    </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xj5-bx-f2G">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xj5-bx-f2G" customClass="CalculatorButton" customModule="Calculator" customModuleProvider="target">
                                                     <rect key="frame" x="102.5" y="0.0" width="95" height="61.5"/>
                                                     <color key="backgroundColor" name="DefaultButtonColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -294,9 +346,13 @@
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                             <integer key="value" value="8"/>
                                                         </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="function" value="5"/>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="otN-70-SO3"/>
+                                                    </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Hi-gz-Nuq">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Hi-gz-Nuq" customClass="CalculatorButton" customModule="Calculator" customModuleProvider="target">
                                                     <rect key="frame" x="205.5" y="0.0" width="94.5" height="61.5"/>
                                                     <color key="backgroundColor" name="DefaultButtonColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -307,14 +363,18 @@
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                             <integer key="value" value="8"/>
                                                         </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="function" value="6"/>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="MSo-Lx-XaV"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zKb-Tz-K0i">
                                             <rect key="frame" x="0.0" y="139.5" width="300" height="62"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6g9-DM-by6">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6g9-DM-by6" customClass="CalculatorButton" customModule="Calculator" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="94.5" height="62"/>
                                                     <color key="backgroundColor" name="DefaultButtonColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -325,9 +385,13 @@
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                             <integer key="value" value="8"/>
                                                         </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="function" value="1"/>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="XDZ-zy-yPK"/>
+                                                    </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sbh-Et-30V">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sbh-Et-30V" customClass="CalculatorButton" customModule="Calculator" customModuleProvider="target">
                                                     <rect key="frame" x="102.5" y="0.0" width="95" height="62"/>
                                                     <color key="backgroundColor" name="DefaultButtonColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -338,9 +402,13 @@
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                             <integer key="value" value="8"/>
                                                         </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="function" value="2"/>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="CRS-HF-GmQ"/>
+                                                    </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbB-4u-fgx">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbB-4u-fgx" customClass="CalculatorButton" customModule="Calculator" customModuleProvider="target">
                                                     <rect key="frame" x="205.5" y="0.0" width="94.5" height="62"/>
                                                     <color key="backgroundColor" name="DefaultButtonColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -351,27 +419,35 @@
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                             <integer key="value" value="8"/>
                                                         </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="function" value="3"/>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="HHK-Yc-Igd"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="a4X-Cp-7L5">
                                             <rect key="frame" x="0.0" y="209.5" width="300" height="61.5"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ke-Gc-AdV">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ke-Gc-AdV" customClass="CalculatorButton" customModule="Calculator" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="94.5" height="61.5"/>
                                                     <color key="backgroundColor" name="DefaultButtonColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                    <state key="normal" title=",">
+                                                    <state key="normal" title=".">
                                                         <color key="titleColor" name="DefaultButtonTextColor"/>
                                                     </state>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                             <integer key="value" value="8"/>
                                                         </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="function" value="."/>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="mKo-0f-SNG"/>
+                                                    </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffM-aV-LL9">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffM-aV-LL9" customClass="CalculatorButton" customModule="Calculator" customModuleProvider="target">
                                                     <rect key="frame" x="102.5" y="0.0" width="95" height="61.5"/>
                                                     <color key="backgroundColor" name="DefaultButtonColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -382,9 +458,13 @@
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                             <integer key="value" value="8"/>
                                                         </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="function" value="0"/>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="1qv-fQ-Ca3"/>
+                                                    </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVh-r1-uv2">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVh-r1-uv2" customClass="CalculatorButton" customModule="Calculator" customModuleProvider="target">
                                                     <rect key="frame" x="205.5" y="0.0" width="94.5" height="61.5"/>
                                                     <color key="backgroundColor" name="DefaultButtonColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -395,13 +475,17 @@
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                             <integer key="value" value="8"/>
                                                         </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="function" value="00"/>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="o1E-vi-4v5"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </stackView>
                                     </subviews>
                                 </stackView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02f-SU-Jnw">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02f-SU-Jnw" customClass="CalculatorButton" customModule="Calculator" customModuleProvider="target">
                                     <rect key="frame" x="308" y="0.0" width="80" height="271"/>
                                     <color key="backgroundColor" name="EqualButtonColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -412,7 +496,11 @@
                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                             <integer key="value" value="8"/>
                                         </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="function" value="="/>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="G8O-ep-6cf"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
