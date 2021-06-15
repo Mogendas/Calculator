@@ -36,6 +36,9 @@ class CalculatorViewController: UIViewController {
         calculatorView.text = result
     }
     
+    @IBAction func buttonPressed(_ sender: CalculatorButton) {
+        viewModel.buttonPressed(button: sender)
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)

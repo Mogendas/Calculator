@@ -8,14 +8,14 @@
 import Foundation
 
 protocol Calculator {
-    func calculate(equationString: String) -> Double?
+    func calculate(calculation: Calculation) -> Calculation?
 }
 
 final class DefaultCalculator: Calculator {
-    func calculate(equationString: String) -> Double? {
-        let exp = NSExpression(format: equationString)
+    func calculate(calculation: Calculation) -> Calculation? {
+        let exp = NSExpression(format: calculation.calculationString).floatifiedForDivisionIfNeeded
         guard let result = exp.expressionValue(with: nil, context: nil) as? NSNumber else { return nil }
-        return result.doubleValue
+        return Calculation(calculationString: calculation.calculationString, result: result.doubleValue)
     }
     
 }
