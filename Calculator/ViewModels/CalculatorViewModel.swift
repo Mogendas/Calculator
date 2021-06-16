@@ -13,6 +13,7 @@ protocol CalculatorViewModel {
     var calculationClosure: CalculationClosure { get set }
     var state: CalculatorState { get set }
     var calculator: Calculator { get set }
+    var bitcoinUSDPrice: Double { get set }
     
     func buttonPressed(button: CalculatorButton)
 }
@@ -24,9 +25,23 @@ final class DefaultCalculatorViewModel: CalculatorViewModel {
     
     var calculations = [Calculation]()
     var currentCalculation = Calculation(calculationString: "", result: nil)
+    var bitcoinUSDPrice = 0.0
     
     init(calculator: Calculator) {
         self.calculator = calculator
+        downloadBitcoinUSBRate()
+    }
+    
+    private func downloadBitcoinUSBRate() {
+        let apiHandler = APIHandler()
+        apiHandler.getBitcoinPrice { result in
+            switch result {
+            case .success(let price):
+                self.bitcoinUSDPrice = price
+            case .failure(let error):
+                print("Error: \(error)")
+            }
+        }
     }
     
     func buttonPressed(button: CalculatorButton) {
@@ -53,6 +68,11 @@ final class DefaultCalculatorViewModel: CalculatorViewModel {
             let lastNumber = currentCalculation.calculationString.lastElement()
             guard let numberAsDouble = Double(lastNumber) else { return }
             currentCalculation.calculationString = currentCalculation.calculationString.replacingOccurrences(of: lastNumber, with: String(sin(numberAsDouble)))
+            updateView()
+        case "bitcoin":
+            let lastNumber = currentCalculation.calculationString.lastElement()
+            guard let numberAsDouble = Double(lastNumber) else { return }
+            currentCalculation.calculationString = currentCalculation.calculationString.replacingOccurrences(of: lastNumber, with: String(numberAsDouble * bitcoinUSDPrice))
             updateView()
         default:
             currentCalculation.calculationString += "\(button.function)"

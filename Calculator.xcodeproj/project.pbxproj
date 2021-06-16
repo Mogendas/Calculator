@@ -15,6 +15,8 @@
 		4C96619F26763CB9009146F9 /* Calculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C96619E26763CB9009146F9 /* Calculation.swift */; };
 		4C9661A2267685CF009146F9 /* NSExpression+float.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9661A1267685CF009146F9 /* NSExpression+float.swift */; };
 		4C9661A42677C701009146F9 /* String+LastElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9661A32677C701009146F9 /* String+LastElement.swift */; };
+		4C9661A626790D63009146F9 /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9661A526790D63009146F9 /* APIHandler.swift */; };
+		4C9661A8267915DC009146F9 /* Rates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9661A7267915DC009146F9 /* Rates.swift */; };
 		4CA260132674D60A00726FCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA260122674D60A00726FCF /* AppDelegate.swift */; };
 		4CA260152674D60A00726FCF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA260142674D60A00726FCF /* SceneDelegate.swift */; };
 		4CA260172674D60A00726FCF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA260162674D60A00726FCF /* ViewController.swift */; };
@@ -51,6 +53,8 @@
 		4C96619E26763CB9009146F9 /* Calculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculation.swift; sourceTree = "<group>"; };
 		4C9661A1267685CF009146F9 /* NSExpression+float.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSExpression+float.swift"; sourceTree = "<group>"; };
 		4C9661A32677C701009146F9 /* String+LastElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+LastElement.swift"; sourceTree = "<group>"; };
+		4C9661A526790D63009146F9 /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
+		4C9661A7267915DC009146F9 /* Rates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rates.swift; sourceTree = "<group>"; };
 		4CA2600F2674D60A00726FCF /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CA260122674D60A00726FCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CA260142674D60A00726FCF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 			children = (
 				4C96619A267512F9009146F9 /* CalculatorState.swift */,
 				4C96619E26763CB9009146F9 /* Calculation.swift */,
+				4C9661A7267915DC009146F9 /* Rates.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -157,6 +162,7 @@
 				4CA260122674D60A00726FCF /* AppDelegate.swift */,
 				4CA260142674D60A00726FCF /* SceneDelegate.swift */,
 				4C96619C2675F353009146F9 /* Calculator.swift */,
+				4C9661A526790D63009146F9 /* APIHandler.swift */,
 				4CA260162674D60A00726FCF /* ViewController.swift */,
 				4CA260182674D60A00726FCF /* Main.storyboard */,
 				4CA2601B2674D60D00726FCF /* Assets.xcassets */,
@@ -319,11 +325,13 @@
 				4CA260132674D60A00726FCF /* AppDelegate.swift in Sources */,
 				4C96619D2675F353009146F9 /* Calculator.swift in Sources */,
 				4C96619F26763CB9009146F9 /* Calculation.swift in Sources */,
+				4C9661A626790D63009146F9 /* APIHandler.swift in Sources */,
 				4C9661A2267685CF009146F9 /* NSExpression+float.swift in Sources */,
 				4C9661942674DD94009146F9 /* CalculatorViewController.swift in Sources */,
 				4CA260152674D60A00726FCF /* SceneDelegate.swift in Sources */,
 				4C9661A42677C701009146F9 /* String+LastElement.swift in Sources */,
 				4C96619826750A80009146F9 /* CalculatorViewModel.swift in Sources */,
+				4C9661A8267915DC009146F9 /* Rates.swift in Sources */,
 				4C96619B267512F9009146F9 /* CalculatorState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
